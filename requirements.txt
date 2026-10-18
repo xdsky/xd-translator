@@ -24,3 +24,16 @@ sacremoses>=0.0.53
 
 # UI
 PyQt5>=5.15
+
+# 翻译（大模型 API 请求）
+requests>=2.31
+
+# 截图翻译
+mss>=9.0
+keyboard>=0.13.5
+rapidocr-onnxruntime>=1.3.0
+# 注意：OCR 想用 GPU 时改装 onnxruntime-gpu（与 rapidocr-onnxruntime 二选一，对应 config.OCR_USE_GPU）
+huggingface_hub>=0.20
+
+# 调试脚本 _test_shot.py 使用
+Pillow>=10.0
