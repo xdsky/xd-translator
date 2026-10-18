@@ -41,11 +41,8 @@ python -m venv .venv
 # 1) 深度学习框架（CUDA 版，按需选择版本）
 pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# 2) 其余依赖
+# 2) 其余依赖（含截图翻译所需）
 pip install -r requirements.txt
-
-# 3) 截图翻译的额外依赖（未写入 requirements.txt）
-pip install mss keyboard rapidocr_onnxruntime huggingface_hub requests Pillow
 ```
 
 ## 配置
