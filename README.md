@@ -1,6 +1,12 @@
 # 自动翻译（Audio Translator）
 
-实时音频翻译 + 截图翻译的小工具，基于 PyQt5 的桌面悬浮窗。
+[![CI](https://github.com/xdsky/xd-translator/actions/workflows/ci.yml/badge.svg)](https://github.com/xdsky/xd-translator/actions/workflows/ci.yml)
+
+**让系统里播放的外语，自动变成你的母语。**
+
+一个 Windows 桌面小工具：**听**系统正在播放的声音 → **识别语种与内容** → **翻译** → **把译文浮在屏幕角落**。全程自动，不用复制粘贴、不用切窗口，看视频 / 开会 / 打游戏时都能用。
+
+除实时音频翻译外，还支持**截图翻译**：按 `Ctrl+Alt+T` 框选屏幕上任意区域（游戏字幕、图片、PDF 均可），译文会覆盖在原文位置。
 
 ## 功能
 
