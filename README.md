@@ -91,3 +91,10 @@ python main.py
 | `screenshot_translate.py` | 截图翻译（OCR + 覆盖显示） |
 | `models/` | OCR 模型文件（含日文识别模型） |
 | `_test_shot.py` | 截图 OCR 的独立调试脚本 |
+
+## 许可
+
+本项目暂未指定开源许可证。如需开源，建议在仓库根目录添加 `LICENSE` 文件（如 MIT、Apache-2.0）。
+
+> 练习说明：本节由 `add-license-section` 分支添加，用于演示「分支 → PR → 合并」流程。
+
