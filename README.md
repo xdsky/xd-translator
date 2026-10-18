@@ -92,6 +92,34 @@ python main.py
 | `models/` | OCR 模型文件（含日文识别模型） |
 | `_test_shot.py` | 截图 OCR 的独立调试脚本 |
 
+## 第三方模型与资源
+
+本项目**自有代码**以 MIT 许可证开源；运行时会用到以下第三方模型与资源，其版权与许可归各自作者所有。
+
+### 一、随仓库提供（`models/` 目录）
+
+| 文件 | 来源 | 用途 |
+|---|---|---|
+| `model.onnx` | [cycloneboy/japan_PP-OCRv4_rec_infer](https://huggingface.co/cycloneboy/japan_PP-OCRv4_rec_infer) | PP-OCRv4 日文识别模型 |
+| `japan_dict.txt` | 同上 | 日文识别字典 |
+
+这两个文件由 `huggingface_hub` 从上述仓库下载（见 `config.py` 中的 `OCR_JA_REPO`），随本项目一起分发，**保留其原始许可**。
+
+### 二、运行时自动下载
+
+| 用途 | 来源 | 说明 |
+|---|---|---|
+| 中英 OCR | `rapidocr_onnxruntime` 自带模型 | 随安装包提供，无需额外下载 |
+| 语音识别 | faster-whisper + Whisper 权重 | 首次运行从 HuggingFace 下载（默认走 `hf-mirror.com` 镜像） |
+| 语音分段 | silero-vad | 首次运行时下载 |
+| 本地翻译 | `facebook/nllb-200-distilled-600M` | 首次运行时下载 |
+
+以上模型均可替换为其他模型。**能否商用请以其官方页面标注的许可为准**——例如 `facebook/nllb-200-distilled-600M` 在 HuggingFace 上标注的是非商用许可（CC-BY-NC-4.0），商用前请自行确认。
+
+### 三、免责
+
+本项目的 MIT 许可证**仅覆盖自有代码**，不覆盖上述第三方模型文件；这些资源仍受其原始许可约束。
+
 ## 许可
 
 本项目采用 **MIT 许可证**开源，详见根目录的 [LICENSE](LICENSE) 文件——你可以自由使用、修改、分发，只需保留版权声明。
