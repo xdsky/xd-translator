@@ -1,0 +1,26 @@
+# 音频采集
+soundcard>=0.4.2
+numpy>=1.24
+
+# 深度学习框架（CUDA 版，请单独安装）
+# pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0,<2.6
+torchaudio>=2.0,<2.6
+
+# CUDA 运行库（ctranslate2 需要 cublas64_12.dll）
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
+
+# 语音识别
+faster-whisper>=1.0.0
+
+# VAD
+silero-vad>=5.0
+
+# 翻译（注意：transformers 5.x 需要 torch>=2.6，此处锁定 4.x）
+transformers>=4.36,<5.0
+sentencepiece>=0.1.99
+sacremoses>=0.0.53
+
+# UI
+PyQt5>=5.15

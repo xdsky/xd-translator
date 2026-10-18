@@ -1,0 +1,19 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+.venv/
+venv/
+
+# 本地私有配置（含密钥，永不提交）
+config_local.py
+.env
+
+# IDE / 工具
+.trae/
+.idea/
+.vscode/
+
+# 日志
+*.log
