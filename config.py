@@ -19,7 +19,7 @@ VAD_THRESHOLD = 0.5          # Silero VAD 语音概率阈值
 # ===================== ASR =====================
 ASR_MODEL_SIZE = "large-v3"  # faster-whisper 模型: tiny/base/small/medium/large-v3
 ASR_DEVICE = "cuda"          # cuda 或 cpu
-ASR_COMPUTE_TYPE = "float16" # float16 / int8 / int8_float16
+ASR_COMPUTE_TYPE = "float16"  # float16 / int8 / int8_float16
 ASR_BEAM_SIZE = 3            # 1=greedy最快，3-5=beam精度更高（3是速度/精度平衡点）
 LANG_CACHE_THRESHOLD = 0.8   # 语种检测置信度低于此值时重新检测
 SOURCE_LANG = None           # 源语言（Whisper 代码），None=自动检测；指定后跳过自动检测更快
@@ -60,7 +60,7 @@ TRANSLATION_DEVICE = "cuda"  # cuda 或 cpu
 TARGET_LANG = "zh"           # 默认目标语言（Whisper 代码），可改 en/ja/ko 等
 FALLBACK_LANG = "en"         # 当源语言 == 目标语言时，翻译成此语言
 TRANSLATION_BEAM_SIZE = 4    # 1=greedy最快，4=beam精度更高
-TRANSLATION_MAX_TOKENS = 256 # 单句最大生成 token 数，避免过长拖慢速度
+TRANSLATION_MAX_TOKENS = 256  # 单句最大生成 token 数，避免过长拖慢速度
 
 # LLM 大模型翻译配置（OpenAI 兼容接口，支持 DeepSeek/Qwen/Kimi/OpenAI 等）
 LLM_API_URL = "https://api.moonshot.cn/v1/chat/completions"  # Kimi API 地址

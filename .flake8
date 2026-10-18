@@ -1,4 +1,8 @@
 [flake8]
 max-line-length = 130
-extend-ignore = E402,F401,W503,E731
+# E203: 与 Black 风格冲突，官方建议忽略
+# E401: 允许一行导入多个模块（调试脚本常用）
+# E402: 本项目部分文件需先设置环境变量再导入
+# F401: 允许未使用的导入
+extend-ignore = E203,E401,E402,F401,W503,E731
 exclude = .git,__pycache__,models,.venv,venv
